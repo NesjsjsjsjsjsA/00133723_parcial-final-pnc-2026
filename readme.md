@@ -1,4 +1,4 @@
-# [Nombre] [Carné]
+# Néstor Alejandro Ayala Abarca | 00133723
 
 ## Indicaciones
 
