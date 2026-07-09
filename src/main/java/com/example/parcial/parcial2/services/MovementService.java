@@ -31,9 +31,7 @@ public class MovementService {
         return createMovement(dto, MovementType.BORROWING);
     }
 
-    public Movement returnBook(MovementRequestDto dto) {
-        return createMovement(dto, MovementType.RETURN);
-    }
+    public Movement returnBook(MovementRequestDto dto) { return createMovement(dto, MovementType.RETURN); }
 
     private Movement createMovement(MovementRequestDto dto, MovementType type) {
         Lector lector = lectorRepository.findByEmail(dto.getEmail())
@@ -52,6 +50,7 @@ public class MovementService {
             }
         } else {
             book.setAvailableCount(book.getAvailableCount() + 1);
+            book.setAvailable(true);
         }
 
         bookRepository.save(book);
