@@ -33,7 +33,7 @@ public class BookService {
         book.setActive(true);
         return bookRepository.save(book);
     }
-
+///
     public Book getBookById(UUID id) {
         return bookRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
