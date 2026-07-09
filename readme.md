@@ -26,10 +26,13 @@ Actualmente:
 
 **Instrucción:** Explique la causa del problema y resuélvalo.
 
+#### Solución
 Se ha identificado el orden de las variables en la función de _findByAuthorAndGenre_ ubicada en el service _BookService_ se encuentran en un orden distinto al planetado por la interfaz _BookRepository_
 Solución: Cambiar el orden.
 
-*return bookRepository.findByAuthorAndGenre(author, genre);*
+```
+return bookRepository.findByAuthorAndGenre(author, genre);
+```
 
 ---
 
@@ -39,10 +42,13 @@ Un usuario reportó que al pedir prestado el libro **The Selfish Gene**, devolve
 
 **Instrucción:** Explique la causa del problema y resuélvalo.
 
+#### Solución:
 Se ha identificado que en la función de _createMovement_ al momento de decir que el movimiento es _RETURN_  nunca se se coloca el vuelve a colocar el dato de _available_ como *true*.
 Solución: Agregar que se cambie el estado del _available_
 
-*book.setAvailable(true);*
+```
+book.setAvailable(true);
+```
 
 ---
 
@@ -63,6 +69,7 @@ GET /books?id=ed16ed1e-7017-4697-a08a-d28c09a74acf
 ```
 
 **Instrucción:** Explique la causa del problema.
+#### Solución
 No se está validando el UUID, por lo que no se maneja ese dato como un verdadero UUID.
 
 ---
@@ -84,6 +91,7 @@ QA ha reportado que el siguiente payload enviado al endpoint `POST /books` provo
 
 **Instrucción:** Explique la causa del problema.
 
+#### Solución
 Se está enviando incorrectamente el valor del género del libro creado. Dicho valor debe de ser en mayúsculas.
 
 ---
